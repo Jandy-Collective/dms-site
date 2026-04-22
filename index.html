@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decided Management Studio | Manager Performance Audits</title>
     <style>
-        /* DECIDED MANAGEMENT STUDIO - DESIGN SYSTEM
-           Refining the "Studio" aesthetic with high-end color and typography.
-        */
         :root {
             --bg-paper: #fdfbfa;
             --bg-surface: #f1f5f9;
@@ -38,7 +35,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* --- Navigation --- */
         nav {
             padding: 25px 0;
             background: var(--bg-paper);
@@ -65,7 +61,6 @@
             color: var(--text-main);
         }
 
-        /* --- Utilities --- */
         .container {
             max-width: var(--max-width);
             margin: 0 auto;
@@ -112,9 +107,8 @@
             display: block;
         }
 
-        /* --- Hero --- */
         .hero {
-            padding: 140px 20px;
+            padding: 120px 20px 60px;
             text-align: center;
             background: radial-gradient(circle at top right, var(--accent-soft) 0%, transparent 40%);
         }
@@ -133,7 +127,14 @@
             font-weight: 400;
         }
 
-        /* --- Opportunity / "Human Connection Gap" Section --- */
+        .who-section {
+            padding-top: 40px;
+        }
+
+        .who-section h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+        }
+
         .blueprint-section {
             background-color: var(--bg-surface);
             border-top: 1px solid var(--border);
@@ -175,7 +176,6 @@
             border-bottom: none;
         }
 
-        /* --- The Calibration (Process) Section --- */
         .process-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -203,18 +203,45 @@
             margin-bottom: 20px;
         }
 
-        .process-item p {
+        .process-item p,
+        .pricing-note,
+        .future-note p,
+        .final-cta p {
             color: var(--text-muted);
             font-size: 1.05rem;
         }
 
-        /* --- Deliverables / Evidence Section --- */
+        .pricing-note {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        .future-note {
+            padding-top: 60px;
+        }
+
+        .future-note .container {
+            text-align: center;
+            max-width: 700px;
+        }
+
+        .future-note h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+        }
+
+        .future-note p {
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+
         .deliverables-section {
             background-color: var(--text-main);
             color: #fff;
         }
 
-        .deliverables-section h2, .deliverables-section h3 {
+        .deliverables-section h2,
+        .deliverables-section h3 {
             color: #fff;
         }
 
@@ -224,9 +251,21 @@
 
         .deliverables-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(6, 1fr);
             gap: 24px;
             margin-top: 60px;
+        }
+
+        .deliverables-grid .card {
+            grid-column: span 2;
+        }
+
+        .deliverables-grid .card:nth-child(4) {
+            grid-column: 2 / span 2;
+        }
+
+        .deliverables-grid .card:nth-child(5) {
+            grid-column: 4 / span 2;
         }
 
         .card {
@@ -254,21 +293,29 @@
             font-size: 0.95rem;
         }
 
-        /* --- Final CTA Section --- */
         .final-cta {
             text-align: center;
             background: linear-gradient(to bottom, var(--bg-paper), var(--bg-surface));
         }
 
+        .final-cta .tagline {
+            font-size: 1.3rem;
+            letter-spacing: 0.2em;
+        }
+
         .final-cta h2 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-size: clamp(2.8rem, 6vw, 5rem);
             margin-bottom: 30px;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        /* --- Footer --- */
+        .final-cta p {
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
         footer {
             padding: 80px 20px;
             text-align: center;
@@ -278,38 +325,73 @@
             border-top: 1px solid var(--border);
         }
 
-        /* --- Mobile Responsiveness --- */
         @media (max-width: 900px) {
-            .grid-split, .process-grid {
+            .grid-split,
+            .process-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
-            .hero { padding: 100px 20px; }
-            .hero h1 { font-size: 2.75rem; }
-            section { padding: 80px 20px; }
+
+            .deliverables-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .deliverables-grid .card,
+            .deliverables-grid .card:nth-child(4),
+            .deliverables-grid .card:nth-child(5) {
+                grid-column: auto;
+            }
+
+            .hero {
+                padding: 100px 20px 50px;
+            }
+
+            .hero h1 {
+                font-size: 2.75rem;
+            }
+
+            section {
+                padding: 80px 20px;
+            }
+
+            .future-note {
+                padding-top: 40px;
+            }
+
+            .final-cta .tagline {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-
     <nav>
         <div class="nav-container">
             <div class="logo">Decided Management Studio</div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="hero">
         <div class="container">
             <span class="tagline">Performance Strategy for SMBs and Startups</span>
             <h1>Stop guessing how your managers are performing.</h1>
             <p>Our Manager Performance Audit identifies hidden risks and builds the systems your leadership needs to scale.</p>
-            <!-- Discovery Call Link as Requested -->
             <a href="https://calendar.app.google/DdZC28kJwQhzbYEa6" class="btn" target="_blank">Schedule a Discovery Call</a>
         </div>
     </header>
 
-    <!-- Core Philosophy Section -->
+    <section class="who-section">
+        <div class="container">
+            <span class="tagline">Who This Is For</span>
+            <h2>Built for founders who know something is off but can’t see where.</h2>
+            <p style="color: var(--text-muted); margin-top: 20px; font-size: 1.1rem; max-width: 800px;">
+                This is for founders, CEOs, and Heads of People who are scaling teams and feeling the hidden strain of inconsistent management.
+                You’ve hired strong individuals but performance is uneven, expectations aren’t always clear, and too much still escalates to you.
+                We step in to evaluate how your managers are actually operating and put in place the structure that typically takes far more time and resources to build internally.
+            </p>
+        </div>
+    </section>
+
     <section class="blueprint-section">
         <div class="container">
             <div class="grid-split">
@@ -320,78 +402,87 @@
                 </div>
                 <ul class="blueprint-list">
                     <li>
-                        <strong>Relational Support Systems</strong> 
-                        We replace "transactional supervision" with active enablement, ensuring people are developed, not just managed.
+                        <strong>Relational Support Systems</strong>
+                        We replace transactional supervision with active enablement, ensuring people are developed, not just managed.
                     </li>
                     <li>
-                        <strong>Eliminating Management Debt</strong> 
+                        <strong>Eliminating Management Debt</strong>
                         Unchecked leadership habits are high-interest debt. We install Outcome Anchors to create a shared reality for success.
                     </li>
                     <li>
-                        <strong>Humanity Over Automation</strong> 
-                        We believe management is an art form. We move teams away from standardized checkboxes toward Relational Tuning.
+                        <strong>Humanity Over Automation</strong>
+                        We believe management is an art form. While companies increasingly rely on AI to scale operations, people leadership cannot be automated. We use AI as a tool but never as a replacement for human judgment, coaching, and connection. Real performance still depends on how managers lead real people.
                     </li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- The 7-Day Calibration -->
     <section>
         <div class="container">
-            <span class="tagline">The Calibration Cycle</span>
-            <h2>Tier 1: Management Risk Diagnostic Heatmap</h2>
+            <span class="tagline">The 7-Day Diagnostic</span>
+            <h2>Manager Performance Audit (Tier 1)</h2>
             <div class="process-grid">
                 <div class="process-item">
-                    <h3>01. Risk Ingestion</h3>
-                    <p>Rapid diagnostic interviews and data analysis to uncover documentation gaps and legal vulnerabilities before they become liabilities.</p>
+                    <h3>01. DMS Assessment</h3>
+                    <p>Structured interviews and data review to understand how your managers actually operate, and where gaps in clarity, documentation, and consistency are creating risk.</p>
                 </div>
                 <div class="process-item">
                     <h3>02. Audit Readiness</h3>
-                    <p>A comprehensive findings report assessing your compliance against high-growth benchmarks and state-level regulatory standards.</p>
+                    <p>A comprehensive findings report grounded in extensive SMB research and real-world operating patterns, assessing your current management practices against proven high-performance benchmarks and core compliance expectations.</p>
                 </div>
                 <div class="process-item">
-                    <h3>03. Remediation Roadmap</h3>
-                    <p>A prioritized, step-by-step 30–60 day action plan detailing exactly what must change to reach high-performance stability.</p>
+                    <h3>03. Action Plan</h3>
+                    <p>A clear, prioritized 30–60 day plan outlining exactly what needs to change, who owns it, and how to stabilize manager performance fast.</p>
                 </div>
             </div>
+            <p class="pricing-note">7-day diagnostic audits start from £2,500 (UK) / $3,500 (US). Final scope confirmed during initial call.</p>
         </div>
     </section>
 
-    <!-- Artifacts & Evidence -->
+    <section class="future-note">
+        <div class="container">
+            <span class="tagline">What Comes Next</span>
+            <h2>This is where it begins.</h2>
+            <p>This audit gives you a clear view of how your managers are operating today. From there, we move into building the systems, capability, and leadership structure that allow your business to scale without friction. Tier 2 and Tier 3 are designed to take this further, installing a full managerial operating system and long-term leadership support.</p>
+        </div>
+    </section>
+
     <section class="deliverables-section">
         <div class="container">
             <span class="tagline">The Evidence View</span>
-            <h2>Tangible artifacts. Data-backed evidence.</h2>
+            <h2>Data-backed evidence. Clear deliverables.</h2>
             <div class="deliverables-grid">
                 <div class="card">
                     <h3>Audit-Readiness Scorecard</h3>
-                    <p>A red/amber/green diagnostic assessing current record-keeping and managerial effectiveness across your team.</p>
+                    <p>A red/yellow/green diagnostic assessing current record-keeping and managerial effectiveness across your organization.</p>
                 </div>
                 <div class="card">
                     <h3>The Transfer Gap Analysis</h3>
-                    <p>Identification of the specific points where training fails to turn into habit, and the systems needed to fix it.</p>
-                </div>
-                <div class="card">
-                    <h3>Success Outline Architecture</h3>
-                    <p>Behavioral benchmarks that ensure Performance Improvement Plans (PIPs) are corrective rather than punitive.</p>
+                    <p>Clear visibility into where training can be strengthened into consistent day-to-day habits, along with the systems that reinforce and sustain high-performance management.</p>
                 </div>
                 <div class="card">
                     <h3>Support Log Audit</h3>
-                    <p>Analysis of time-stamped 1:1 records to ensure managers are held accountable for their primary duty of care.</p>
+                    <p>Review of one-on-one records to ensure consistent, high-quality manager support is happening across the organization.</p>
+                </div>
+                <div class="card">
+                    <h3>Success Outline Architecture</h3>
+                    <p>Behavioral benchmarks that ensure coaching, development, and performance improvement plans are used to support growth rather than as punitive measures.</p>
+                </div>
+                <div class="card">
+                    <h3>Organization-Wide Alignment</h3>
+                    <p>A structured foundation designed to ensure consistent, high-quality management from leadership to frontline teams.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA Section -->
     <section class="final-cta" id="contact">
         <div class="container">
-            <span class="tagline">Take Decisive Action</span>
-            <h2>Pay down your Management Debt before your next milestone.</h2>
-            <p style="margin-bottom: 40px; color: var(--text-muted); font-size: 1.1rem;">Diagnostic audits typically deliver a full Heatmap and Roadmap within 7 days of kickoff.</p>
-            <!-- Audit Link as Requested -->
-            <a href="https://calendar.app.google/M8JtuEuhw6HiB1Xc8" class="btn" target="_blank">Book the Audit</a>
+            <span class="tagline">Take Decided Action</span>
+            <h2>Make management a strength across your business.</h2>
+            <p>Diagnostic audits typically deliver a full assessment and roadmap within 7 days of kickoff.</p>
+            <a href="https://calendar.app.google/M8JtuEuhw6HiB1Xc8" class="btn" target="_blank">Book DMS Assessment</a>
         </div>
     </section>
 
@@ -400,6 +491,5 @@
             <p>&copy; 2026 Decided Management Studio. Built for founders and leaders.</p>
         </div>
     </footer>
-
 </body>
 </html>
