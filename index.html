@@ -1,397 +1,390 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2867
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decided Management Studio | Manager Performance Audits</title>
+    <style>
+        /* DECIDED MANAGEMENT STUDIO - REFINED COLOR PALETTE
+           Main: #0F172A (Deep Midnight)
+           Accent: #2563EB (Studio Indigo)
+           Surface: #F8FAFC (Cool Stone)
+           Paper: #FDFBFA (Warm White)
+        */
 
-\f0\fs24 \cf0 <!DOCTYPE html>\
-<html lang="en">\
-<head>\
-    <meta charset="UTF-8">\
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
-    <title>Decided Management Studio | Manager Performance Audits</title>\
-    <style>\
-        /* DECIDED MANAGEMENT STUDIO - REFINED COLOR PALETTE\
-           Main: #0F172A (Deep Midnight)\
-           Accent: #2563EB (Studio Indigo)\
-           Surface: #F8FAFC (Cool Stone)\
-           Paper: #FDFBFA (Warm White)\
-        */\
-\
-        :root \{\
-            --bg-paper: #fdfbfa;\
-            --bg-surface: #f1f5f9;\
-            --text-main: #0f172a;\
-            --text-muted: #475569;\
-            --accent: #2563eb;\
-            --accent-soft: #dbeafe;\
-            --border: #e2e8f0;\
-            --max-width: 1100px;\
-            --section-padding: 100px 20px;\
-        \}\
-\
-        * \{\
-            margin: 0;\
-            padding: 0;\
-            box-sizing: border-box;\
-        \}\
-\
-        html \{\
-            scroll-behavior: smooth;\
-        \}\
-\
-        body \{\
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;\
-            line-height: 1.6;\
-            color: var(--text-main);\
-            background-color: var(--bg-paper);\
-            -webkit-font-smoothing: antialiased;\
-        \}\
-\
-        /* --- Utilities --- */\
-        .container \{\
-            max-width: var(--max-width);\
-            margin: 0 auto;\
-            padding: 0 20px;\
-        \}\
-\
-        .btn \{\
-            display: inline-block;\
-            padding: 18px 36px;\
-            background: var(--accent);\
-            color: #ffffff;\
-            text-decoration: none;\
-            font-weight: 600;\
-            font-size: 0.9rem;\
-            letter-spacing: 0.05em;\
-            transition: all 0.3s ease;\
-            text-transform: uppercase;\
-            border: 1px solid var(--accent);\
-        \}\
-\
-        .btn:hover \{\
-            background: transparent;\
-            color: var(--accent);\
-        \}\
-\
-        section \{\
-            padding: var(--section-padding);\
-        \}\
-\
-        h1, h2, h3 \{\
-            line-height: 1.1;\
-            font-weight: 800;\
-            letter-spacing: -0.03em;\
-            color: var(--text-main);\
-        \}\
-\
-        .tagline \{\
-            text-transform: uppercase;\
-            font-size: 0.75rem;\
-            font-weight: 800;\
-            letter-spacing: 0.15em;\
-            color: var(--accent);\
-            margin-bottom: 24px;\
-            display: block;\
-        \}\
-\
-        /* --- Navigation --- */\
-        nav \{\
-            padding: 25px 0;\
-            background: var(--bg-paper);\
-            position: sticky;\
-            top: 0;\
-            z-index: 100;\
-            border-bottom: 1px solid var(--border);\
-        \}\
-\
-        .logo \{\
-            font-size: 1.1rem;\
-            font-weight: 900;\
-            letter-spacing: -0.02em;\
-            text-transform: uppercase;\
-            color: var(--text-main);\
-        \}\
-\
-        /* --- Hero --- */\
-        .hero \{\
-            padding: 140px 20px;\
-            text-align: center;\
-            background: radial-gradient(circle at top right, var(--accent-soft) 0%, transparent 40%);\
-        \}\
-\
-        .hero h1 \{\
-            font-size: clamp(2.5rem, 6vw, 4.5rem);\
-            max-width: 950px;\
-            margin: 0 auto 30px;\
-        \}\
-\
-        .hero p \{\
-            font-size: 1.3rem;\
-            color: var(--text-muted);\
-            max-width: 650px;\
-            margin: 0 auto 40px;\
-            font-weight: 400;\
-        \}\
-\
-        /* --- Problem/Opportunity Section --- */\
-        .problem-section \{\
-            background-color: var(--bg-surface);\
-            border-top: 1px solid var(--border);\
-            border-bottom: 1px solid var(--border);\
-        \}\
-\
-        .grid-split \{\
-            display: grid;\
-            grid-template-columns: 1fr 1.2fr;\
-            gap: 80px;\
-            align-items: start;\
-        \}\
-\
-        .problem-content h2 \{\
-            font-size: 2.75rem;\
-            margin-bottom: 24px;\
-        \}\
-\
-        .problem-list \{\
-            list-style: none;\
-        \}\
-\
-        .problem-list li \{\
-            padding: 30px 0;\
-            border-bottom: 1px solid var(--border);\
-            font-size: 1.15rem;\
-        \}\
-\
-        .problem-list li strong \{\
-            display: block;\
-            color: var(--accent);\
-            font-size: 0.9rem;\
-            text-transform: uppercase;\
-            letter-spacing: 0.05em;\
-            margin-bottom: 8px;\
-        \}\
-\
-        .problem-list li:last-child \{\
-            border-bottom: none;\
-        \}\
-\
-        /* --- What We Do --- */\
-        .process-grid \{\
-            display: grid;\
-            grid-template-columns: repeat(3, 1fr);\
-            gap: 40px;\
-            margin-top: 80px;\
-        \}\
-\
-        .process-item \{\
-            position: relative;\
-            padding-top: 30px;\
-        \}\
-\
-        .process-item::before \{\
-            content: "";\
-            position: absolute;\
-            top: 0;\
-            left: 0;\
-            width: 40px;\
-            height: 4px;\
-            background: var(--accent);\
-        \}\
-\
-        .process-item h3 \{\
-            font-size: 1.6rem;\
-            margin-bottom: 20px;\
-        \}\
-\
-        .process-item p \{\
-            color: var(--text-muted);\
-            font-size: 1.05rem;\
-        \}\
-\
-        /* --- Deliverables --- */\
-        .deliverables-section \{\
-            background-color: var(--text-main);\
-            color: #fff;\
-        \}\
-\
-        .deliverables-section h2 \{\
-            color: #fff;\
-        \}\
-\
-        .deliverables-section .tagline \{\
-            color: var(--accent-soft);\
-        \}\
-\
-        .deliverables-grid \{\
-            display: grid;\
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\
-            gap: 24px;\
-            margin-top: 60px;\
-        \}\
-\
-        .card \{\
-            background: rgba(255, 255, 255, 0.03);\
-            border: 1px solid rgba(255, 255, 255, 0.1);\
-            padding: 50px 40px;\
-            transition: transform 0.3s ease, border-color 0.3s ease;\
-        \}\
-\
-        .card:hover \{\
-            transform: translateY(-5px);\
-            border-color: var(--accent);\
-            background: rgba(255, 255, 255, 0.05);\
-        \}\
-\
-        .card h3 \{\
-            font-size: 1.25rem;\
-            margin-bottom: 15px;\
-            text-transform: uppercase;\
-            letter-spacing: 0.1em;\
-            color: #fff;\
-        \}\
-\
-        .card p \{\
-            color: #cbd5e1;\
-            font-size: 0.95rem;\
-        \}\
-\
-        /* --- Final CTA --- */\
-        .final-cta \{\
-            text-align: center;\
-            background: linear-gradient(to bottom, var(--bg-paper), var(--bg-surface));\
-        \}\
-\
-        .final-cta h2 \{\
-            font-size: clamp(2rem, 5vw, 3.5rem);\
-            margin-bottom: 30px;\
-            max-width: 800px;\
-            margin-left: auto;\
-            margin-right: auto;\
-        \}\
-\
-        /* --- Footer --- */\
-        footer \{\
-            padding: 80px 20px;\
-            text-align: center;\
-            font-size: 0.85rem;\
-            color: var(--text-muted);\
-            background: var(--bg-surface);\
-            border-top: 1px solid var(--border);\
-        \}\
-\
-        /* --- Mobile Responsiveness --- */\
-        @media (max-width: 900px) \{\
-            .grid-split, .process-grid \{\
-                grid-template-columns: 1fr;\
-                gap: 40px;\
-            \}\
-            \
-            .hero \{ padding: 100px 20px; \}\
-            .hero h1 \{ font-size: 2.75rem; \}\
-            section \{ padding: 80px 20px; \}\
-        \}\
-    </style>\
-</head>\
-<body>\
-\
-    <nav>\
-        <div class="container">\
-            <div class="logo">Decided Management Studio</div>\
-        </div>\
-    </nav>\
-\
-    <!-- Hero Section -->\
-    <header class="hero">\
-        <div class="container">\
-            <span class="tagline">Performance Strategy for SMBs and Startups</span>\
-            <h1>Stop guessing how your managers are performing.</h1>\
-            <p>Our Manager Performance Audit identifies hidden risks and builds the systems your leadership needs to scale.</p>\
-            <a href="#contact" class="btn">Book the Audit</a>\
-        </div>\
-    </header>\
-\
-    <!-- Opportunity Section -->\
-    <section class="problem-section">\
-        <div class="container">\
-            <div class="grid-split">\
-                <div class="problem-content">\
-                    <span class="tagline">The Competitive Advantage</span>\
-                    <h2>Management excellence is more than a cultural asset. It\'92s the engine that drives your growth.</h2>\
-                </div>\
-                <ul class="problem-list">\
-                    <li><strong>Retention by Design</strong> High-performing teams stay longer when they are managed with precision and clarity.</li>\
-                    <li><strong>Accelerated Execution</strong> Great management turns high-level strategy into consistent, daily momentum.</li>\
-                    <li><strong>Scalable Systems</strong> Standardized management practices allow your business to grow without breaking.</li>\
-                </ul>\
-            </div>\
-        </div>\
-    </section>\
-\
-    <!-- What We Do Section -->\
-    <section>\
-        <div class="container">\
-            <span class="tagline">Our Approach</span>\
-            <h2>The Manager Performance Audit</h2>\
-            <div class="process-grid">\
-                <div class="process-item">\
-                    <h3>01. Risk Identification</h3>\
-                    <p>We analyze existing performance data and interview key stakeholders to find where your leadership pipeline is leaking.</p>\
-                </div>\
-                <div class="process-item">\
-                    <h3>02. System Stress Test</h3>\
-                    <p>We evaluate your current feedback loops, review cycles, and accountability structures against high-growth benchmarks.</p>\
-                </div>\
-                <div class="process-item">\
-                    <h3>03. Actionable Design</h3>\
-                    <p>No 100-page slide decks. We deliver a tactical 30\'9660 day plan to stabilize and accelerate your team.</p>\
-                </div>\
-            </div>\
-        </div>\
-    </section>\
-\
-    <!-- Deliverables Section -->\
-    <section class="deliverables-section">\
-        <div class="container">\
-            <span class="tagline">Deliverables</span>\
-            <h2>Tangible outcomes. No fluff.</h2>\
-            <div class="deliverables-grid">\
-                <div class="card">\
-                    <h3>Performance Scorecard</h3>\
-                    <p>A data-backed assessment of your current management capability across all departments.</p>\
-                </div>\
-                <div class="card">\
-                    <h3>The Risk Registry</h3>\
-                    <p>Clear identification of leadership bottlenecks and retention risks before they become crises.</p>\
-                </div>\
-                <div class="card">\
-                    <h3>The 60-Day Roadmap</h3>\
-                    <p>A step-by-step implementation guide for improving performance systems immediately.</p>\
-                </div>\
-                <div class="card">\
-                    <h3>System Architecture</h3>\
-                    <p>Templates and frameworks customized for your specific business size and vertical.</p>\
-                </div>\
-            </div>\
-        </div>\
-    </section>\
-\
-    <!-- Final CTA Section -->\
-    <section class="final-cta" id="contact">\
-        <div class="container">\
-            <span class="tagline">Take the next step</span>\
-            <h2>Build a high-performance culture by design, not by accident.</h2>\
-            <p style="margin-bottom: 40px; color: var(--text-muted); font-size: 1.1rem;">Audits typically take 14 days from kickoff to delivery.</p>\
-            <a href="mailto:hello@decidedstudio.com" class="btn">Schedule a Discovery Call</a>\
-        </div>\
-    </section>\
-\
-    <footer>\
-        <div class="container">\
-            <p>&copy; 2024 Decided Management Studio. Built for founders and leaders.</p>\
-        </div>\
-    </footer>\
-\
-</body>\
-</html>}
+        :root {
+            --bg-paper: #fdfbfa;
+            --bg-surface: #f1f5f9;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --accent: #2563eb;
+            --accent-soft: #dbeafe;
+            --border: #e2e8f0;
+            --max-width: 1100px;
+            --section-padding: 100px 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-paper);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- Utilities --- */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 36px;
+            background: var(--accent);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            border: 1px solid var(--accent);
+        }
+
+        .btn:hover {
+            background: transparent;
+            color: var(--accent);
+        }
+
+        section {
+            padding: var(--section-padding);
+        }
+
+        h1, h2, h3 {
+            line-height: 1.1;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: var(--text-main);
+        }
+
+        .tagline {
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            padding: 25px 0;
+            background: var(--bg-paper);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            color: var(--text-main);
+        }
+
+        /* --- Hero --- */
+        .hero {
+            padding: 140px 20px;
+            text-align: center;
+            background: radial-gradient(circle at top right, var(--accent-soft) 0%, transparent 40%);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            max-width: 950px;
+            margin: 0 auto 30px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 40px;
+            font-weight: 400;
+        }
+
+        /* --- Problem/Opportunity Section --- */
+        .problem-section {
+            background-color: var(--bg-surface);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .grid-split {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .problem-content h2 {
+            font-size: 2.75rem;
+            margin-bottom: 24px;
+        }
+
+        .problem-list {
+            list-style: none;
+        }
+
+        .problem-list li {
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 1.15rem;
+        }
+
+        .problem-list li strong {
+            display: block;
+            color: var(--accent);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+
+        .problem-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* --- What We Do --- */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 80px;
+        }
+
+        .process-item {
+            position: relative;
+            padding-top: 30px;
+        }
+
+        .process-item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 4px;
+            background: var(--accent);
+        }
+
+        .process-item h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        .process-item p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* --- Deliverables --- */
+        .deliverables-section {
+            background-color: var(--text-main);
+            color: #fff;
+        }
+
+        .deliverables-section h2 {
+            color: #fff;
+        }
+
+        .deliverables-section .tagline {
+            color: var(--accent-soft);
+        }
+
+        .deliverables-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 60px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 50px 40px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #fff;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        /* --- Final CTA --- */
+        .final-cta {
+            text-align: center;
+            background: linear-gradient(to bottom, var(--bg-paper), var(--bg-surface));
+        }
+
+        .final-cta h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 80px 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            background: var(--bg-surface);
+            border-top: 1px solid var(--border);
+        }
+
+        /* --- Mobile Responsiveness --- */
+        @media (max-width: 900px) {
+            .grid-split, .process-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .hero { padding: 100px 20px; }
+            .hero h1 { font-size: 2.75rem; }
+            section { padding: 80px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <div class="logo">Decided Management Studio</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <span class="tagline">Performance Strategy for SMBs and Startups</span>
+            <h1>Stop guessing how your managers are performing.</h1>
+            <p>Our Manager Performance Audit identifies hidden risks and builds the systems your leadership needs to scale.</p>
+            <a href="#contact" class="btn">Book the Audit</a>
+        </div>
+    </header>
+
+    <!-- Opportunity Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="grid-split">
+                <div class="problem-content">
+                    <span class="tagline">The Competitive Advantage</span>
+                    <h2>Management excellence is more than a cultural asset. It’s the engine that drives your growth.</h2>
+                </div>
+                <ul class="problem-list">
+                    <li><strong>Retention by Design</strong> High-performing teams stay longer when they are managed with precision and clarity.</li>
+                    <li><strong>Accelerated Execution</strong> Great management turns high-level strategy into consistent, daily momentum.</li>
+                    <li><strong>Scalable Systems</strong> Standardized management practices allow your business to grow without breaking.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section>
+        <div class="container">
+            <span class="tagline">Our Approach</span>
+            <h2>The Manager Performance Audit</h2>
+            <div class="process-grid">
+                <div class="process-item">
+                    <h3>01. Risk Identification</h3>
+                    <p>We analyze existing performance data and interview key stakeholders to find where your leadership pipeline is leaking.</p>
+                </div>
+                <div class="process-item">
+                    <h3>02. System Stress Test</h3>
+                    <p>We evaluate your current feedback loops, review cycles, and accountability structures against high-growth benchmarks.</p>
+                </div>
+                <div class="process-item">
+                    <h3>03. Actionable Design</h3>
+                    <p>No 100-page slide decks. We deliver a tactical 30–60 day plan to stabilize and accelerate your team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deliverables Section -->
+    <section class="deliverables-section">
+        <div class="container">
+            <span class="tagline">Deliverables</span>
+            <h2>Tangible outcomes. No fluff.</h2>
+            <div class="deliverables-grid">
+                <div class="card">
+                    <h3>Performance Scorecard</h3>
+                    <p>A data-backed assessment of your current management capability across all departments.</p>
+                </div>
+                <div class="card">
+                    <h3>The Risk Registry</h3>
+                    <p>Clear identification of leadership bottlenecks and retention risks before they become crises.</p>
+                </div>
+                <div class="card">
+                    <h3>The 60-Day Roadmap</h3>
+                    <p>A step-by-step implementation guide for improving performance systems immediately.</p>
+                </div>
+                <div class="card">
+                    <h3>System Architecture</h3>
+                    <p>Templates and frameworks customized for your specific business size and vertical.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <span class="tagline">Take the next step</span>
+            <h2>Build a high-performance culture by design, not by accident.</h2>
+            <p style="margin-bottom: 40px; color: var(--text-muted); font-size: 1.1rem;">Audits typically take 14 days from kickoff to delivery.</p>
+            <a href="mailto:hello@decidedstudio.com" class="btn">Schedule a Discovery Call</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Decided Management Studio. Built for founders and leaders.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
